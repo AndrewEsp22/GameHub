@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Mario Kart 8 Deluxe",
+    "description": "El juego de carreras más vendido de Nintendo Switch. Incluye 48 pistas, más de 40 personajes y modo multijugador para hasta 12 jugadores en línea.",
+    "precio": 249900,
+    "categoria": "Nintendo Switch",
+    "imagen": "https://static.posters.cz/image/750/50037.jpg",
+    "stock": 25
+  },
+  {
+    "id": 2,
+    "name": "The Legend of Zelda: Breath of the Wild",
+    "description": "Explora el vasto reino de Hyrule en este épico juego de aventura en mundo abierto. Resuelve puzzles, escala montañas y derrota a Ganon para salvar la princesa Zelda.",
+    "precio": 199900,
+    "categoria": "Nintendo Switch",
+    "imagen": "https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Breath_of_the_Wild",
+    "stock": 18
+  }
+]
