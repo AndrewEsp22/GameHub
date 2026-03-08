@@ -6,7 +6,7 @@ const tableBody = document.getElementById("itemsTable");
 const submitBtn = document.getElementById("submitBtn");
 let editingId = null;
 
-// Eventos de tabla (delegación)
+// delegacion de eventos en la tabla
 tableBody.addEventListener("click", async (e) => {
     const btn = e.target.closest("button");
     if (!btn) return;
@@ -38,30 +38,31 @@ tableBody.addEventListener("click", async (e) => {
     }
 });
 
-// Envío del form
+// envio del formulario con todos los campos
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const name        = form.querySelector("#name").value.trim();
-    const description = form.querySelector("#description").value.trim();
-    const categoria   = form.querySelector("#categoria").value.trim();
-    const precio      = parseInt(form.querySelector("#precio").value) || 0;
-    const stock       = parseInt(form.querySelector("#stock").value) || 0;
-    const imagen      = form.querySelector("#imagen").value.trim();
+    const name = form.querySelector("#name").value;
+    const description = form.querySelector("#description").value;
+    const price = Number(form.querySelector("#price").value) || 0;
+    const category = form.querySelector("#category").value;
+    const stock = Number(form.querySelector("#stock").value) || 0;
+    const platform = form.querySelector("#platform").value;
+    const image = form.querySelector("#image").value;
 
     if (!name) {
         alert("El campo nombre es obligatorio");
         return;
     }
 
-    const payload = { name, description, categoria, precio, stock, imagen };
+    const itemData = { name, description, price, category, stock, platform, image };
 
     try {
         if (editingId) {
-            await updateItem(editingId, payload);
+            await updateItem(editingId, itemData);
             editingId = null;
         } else {
-            await createItem(payload);
+            await createItem(itemData);
         }
 
         resetForm(form, submitBtn);
@@ -72,7 +73,7 @@ form.addEventListener("submit", async (e) => {
     }
 });
 
-// Cargar al inicio
+// cargar items al inicio
 async function loadItems() {
     try {
         const items = await getItems();

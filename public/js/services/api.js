@@ -1,7 +1,7 @@
 const API_URL = "/api/items";
 
 export async function getItems() {
-    const res = await fetch(`${API_URL}`);
+    const res = await fetch(API_URL);
     if (!res.ok) throw new Error("Error al cargar items");
     return res.json();
 }
