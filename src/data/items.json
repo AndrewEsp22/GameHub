@@ -1,20 +1,42 @@
 [
   {
     "id": 1,
-    "name": "Mario Kart 8 Deluxe",
-    "description": "El juego de carreras más vendido de Nintendo Switch. Incluye 48 pistas, más de 40 personajes y modo multijugador para hasta 12 jugadores en línea.",
-    "precio": 249900,
-    "categoria": "Nintendo Switch",
-    "imagen": "https://static.posters.cz/image/750/50037.jpg",
-    "stock": 25
+    "name": "The Legend of Zelda: Tears of the Kingdom",
+    "description": "Secuela de Breath of the Wild donde Link explora las islas flotantes de Hyrule con nuevas habilidades como Ultrahand y Fuse.",
+    "price": 249900,
+    "category": "Aventura",
+    "stock": 15,
+    "platform": "Nintendo Switch",
+    "image": "https://upload.wikimedia.org/wikipedia/en/f/fb/The_Legend_of_Zelda_Tears_of_the_Kingdom_cover.jpg"
   },
   {
     "id": 2,
-    "name": "The Legend of Zelda: Breath of the Wild",
-    "description": "Explora el vasto reino de Hyrule en este épico juego de aventura en mundo abierto. Resuelve puzzles, escala montañas y derrota a Ganon para salvar la princesa Zelda.",
-    "precio": 199900,
-    "categoria": "Nintendo Switch",
-    "imagen": "https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Breath_of_the_Wild",
-    "stock": 18
+    "name": "God of War Ragnarök",
+    "description": "Kratos y Atreus se enfrentan al Ragnarök nórdico en esta épica aventura de acción con combates brutales y una historia increíble.",
+    "price": 279900,
+    "category": "Acción",
+    "stock": 8,
+    "platform": "PS5",
+    "image": "https://upload.wikimedia.org/wikipedia/en/e/ee/God_of_War_Ragnar%C3%B6k_cover.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Elden Ring",
+    "description": "RPG de mundo abierto creado por FromSoftware y George R.R. Martin. Explora las Tierras Intermedias y derrota jefes legendarios.",
+    "price": 199900,
+    "category": "RPG",
+    "stock": 22,
+    "platform": "PC",
+    "image": "https://upload.wikimedia.org/wikipedia/en/b/b9/Elden_Ring_Box_art.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Red Dead Redemption 2",
+    "description": "Juego de mundo abierto ambientado en el salvaje oeste americano. Sigue la historia de Arthur Morgan y la banda de Van der Linde.",
+    "price": 149900,
+    "category": "Aventura",
+    "stock": 12,
+    "platform": "PC",
+    "image": "https://upload.wikimedia.org/wikipedia/en/4/44/Red_Dead_Redemption_II.jpg"
   }
 ]

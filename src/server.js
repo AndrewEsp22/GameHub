@@ -3,7 +3,7 @@ const fs = require("fs/promises");
 const path = require("path");
 const handleItemsRoutes = require("./routes/items");
 
-const PORT = 3001;
+const PORT = 3000;
 const PUBLIC_PATH = path.join(__dirname, "..", "public");
 
 const MIME_TYPES = {

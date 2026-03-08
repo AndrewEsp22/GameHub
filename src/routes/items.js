@@ -1,6 +1,3 @@
-
-Copiar
-
 const fs = require("fs");
 const path = require("path");
 
@@ -42,18 +39,8 @@ function handleItemsRoutes(req, res) {
         req.on("data", chunk => body += chunk);
         req.on("end", () => {
             const items = readData();
-            const data = JSON.parse(body);
-
-            const nuevo = {
-                id:          Date.now(),
-                name:        data.name        || "",
-                description: data.description || "",
-                categoria:   data.categoria   || "",
-                precio:      Number(data.precio) || 0,
-                stock:       Number(data.stock)  || 0,
-                imagen:      data.imagen      || "",
-            };
-
+            const nuevo = JSON.parse(body);
+            nuevo.id = Date.now();
             items.push(nuevo);
             writeData(items);
             res.end(JSON.stringify(nuevo));
@@ -73,17 +60,7 @@ function handleItemsRoutes(req, res) {
                 const idx = items.findIndex(i => i.id === id);
 
                 if (idx >= 0) {
-                    const data = JSON.parse(body);
-                    const updated = {
-                        ...items[idx],
-                        name:        data.name        ?? items[idx].name,
-                        description: data.description ?? items[idx].description,
-                        categoria:   data.categoria   ?? items[idx].categoria,
-                        precio:      data.precio !== undefined ? Number(data.precio) : items[idx].precio,
-                        stock:       data.stock  !== undefined ? Number(data.stock)  : items[idx].stock,
-                        imagen:      data.imagen      ?? items[idx].imagen,
-                        id,
-                    };
+                    const updated = { ...items[idx], ...JSON.parse(body), id };
                     items[idx] = updated;
                     writeData(items);
                     res.end(JSON.stringify(updated));
